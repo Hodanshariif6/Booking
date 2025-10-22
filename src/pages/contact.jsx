@@ -30,7 +30,7 @@ export default function Contact() {
     }
 
     try {
-      const res = await axios.post("http://localhost:7000/Cabasho/add", formData);
+      const res = await axios.post("https://booking-backend-7qa6.onrender.com/Cabasho/add", formData);
       toast.success(res.data.message);
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {

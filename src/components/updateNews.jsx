@@ -15,14 +15,14 @@ function UpdateNews() {
 
   const fetchNews = async () => {
     try {
-      const res = await axios.get(`http://localhost:7000/readSingle/New/${id}`);
+      const res = await axios.get(`https://booking-backend-7qa6.onrender.com/readSingle/New/${id}`);
       const news = Array.isArray(res.data) ? res.data[0] : res.data;
 
       if (!news) throw new Error("News not found");
 
       setName(news.name);
       setDescription(news.desc); 
-      setPreview(`http://localhost:7000/allImages/${news.img}`); 
+      setPreview(`https://booking-backend-7qa6.onrender.com/allImages/${news.img}`); 
     } catch (err) {
       console.error(err);
     }
@@ -45,7 +45,7 @@ o
         formData.append("img", imgFile); 
       }
 
-      await axios.put(`http://localhost:7000/update/new/${id}`, formData, {
+      await axios.put(`https://booking-backend-7qa6.onrender.com/update/new/${id}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 
