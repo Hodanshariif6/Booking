@@ -20,7 +20,7 @@ import ForgotPassword from "./pages/ForgotPassword"
 import ProtectedRouter from "./pages/ProtectedRouter"
 import LoginAdmin from "./pages/LoginAdmin"
 import RegisterAdmin from "./pages/Registeradmin"
-import Header from "./components/header"
+import Header from "./components/Header"
 
 function MainLayout({ children }) {
   return (
